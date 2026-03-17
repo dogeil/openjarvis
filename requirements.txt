@@ -4,3 +4,5 @@ pytest==8.1.1
 httpx==0.27.0
 sqlalchemy==2.0.28
 databases[postgresql]==0.9.0
+mediapipe>=0.10.30
+opencv-python>=4.9.0.80
