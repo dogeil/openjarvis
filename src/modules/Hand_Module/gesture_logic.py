@@ -6,7 +6,9 @@ class GestureProcessor:
     def __init__(self):
         # Your Original Config
         self.config = {
-            (("FOUR_FINGERS", "THREE_FINGERS", "TWO_FINGERS", "ONE_FINGER"), 1.0): ("esc",),
+            # Special action used by the launcher: when this triggers, the Hand module
+            # exits and the launcher will shut down all other processes.
+            (("FOUR_FINGERS", "THREE_FINGERS", "TWO_FINGERS", "ONE_FINGER"), 1.0): ("EXIT_JARVIS",),
             # (("Open_Palm", "Closed_Fist"), 1.0): ("alt", "tab"),
             # (("Thumb_Up", "Thumb_Down"), 2.0): ("alt", "tab"),
             (("Victory", "ILoveYou"), 2.0): ("alt", "tab"),

@@ -147,6 +147,9 @@ class HandEngine:
                 action = self.processor.process_frame(None, list(custom_labels_detected))
                 if action:
                     print(f"Sequence Triggered: {action}")
+                    if action == ("EXIT_JARVIS",):
+                        print("[Hand Module] Exit gesture detected. Shutting down Jarvis...")
+                        break
 
                 cv2.imshow("Jarvis Hand Module", frame)
                 if cv2.waitKey(1) & 0xFF == 27: break
