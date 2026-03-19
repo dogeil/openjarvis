@@ -1,4 +1,5 @@
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from httpx import ASGITransport
 import json
 
 from api.schemas import JarvisMessage

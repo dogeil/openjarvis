@@ -1,4 +1,4 @@
-from src.modules.STT_Module.stt_engine import STTEngine
+from modules.STT_Module.stt_engine import STTEngine
 
 
 def test_stt_engine_importable():
