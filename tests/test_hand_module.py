@@ -5,7 +5,7 @@ import os
 # Add 'src' to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 
-from modules.Hand_Module.hand_engine import HandEngine
+from src.modules.Hand_Module.hand_engine import HandEngine
 
 class TestHandModule(unittest.TestCase):
     def test_engine_initialization(self):
