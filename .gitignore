@@ -70,3 +70,6 @@ Thumbs.db (Windows)
 # Add any specific local config files here
 local_config.yaml
 secrets.json
+
+# Ignore known faces directory (personal images)
+known_faces/

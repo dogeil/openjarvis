@@ -130,6 +130,13 @@ class FaceEngine:
         self._primary_last_reco_bbox = None
 
     def _extract_feature_from_image(self, img_bgr) -> Optional[np.ndarray]:
+        # Limit image size to avoid detector issues with very large images
+        max_dim = 1000
+        h, w, _ = img_bgr.shape
+        if max(w, h) > max_dim:
+            scale = max_dim / max(w, h)
+            new_w, new_h = int(w * scale), int(h * scale)
+            img_bgr = cv2.resize(img_bgr, (new_w, new_h), interpolation=cv2.INTER_AREA)
         ih, iw, _ = img_bgr.shape
         self._detector.setInputSize((iw, ih))
         _, faces = self._detector.detect(img_bgr)
